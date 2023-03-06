@@ -1,4 +1,6 @@
-## Intonační analýza nahrávek řeči - zadání práce:
+## Intonační analýza nahrávek řeči
+
+### Zadání práce:
 
 <b>Materiál:</b> TextGrids (složka data_tg) a PitchTiers (složka data_pt) nahrávek čtené řeči s textem
 
@@ -12,3 +14,6 @@
 <br> 2.) TextGrid – změřit artikulační tempo (syll/s). Nápověda: počet slabik (např. 21) vydělte trváním, které zjistíte jako hodnotu t2 posledního mínus t1 prvního neprázdného intervalu.
 
 Všechny změřené ukazatele vyneste graficky v závislosti na věku a rozdělené podle pohlaví. Přidejte lineární regresi s konfidenčním pásmem pro hladinu významnosti alfa = 0.05. Postupujte tak, abyste se vyhnuli problému pseudoreplikace.
+
+### Výsledky:
+Výstupem práce jsou dvě excelové tabulky naměřených hodnot a grafy. Výstupy jsou nahrány ve složce ve formátu pdf. 
