@@ -47,8 +47,7 @@ for (I in seq_along(listFiles)) {
   ptOrez <- pt.cut(pt, tStart = min(pt$t), tEnd = max(pt$t))
   
   tab$durationPT[I] <- ptOrez$tmax - ptOrez$tmin
-  
-  
+    
   if (tab$item[I] == "D") {
     tab$syll[I] <- 26
   } else if (tab$item[I] == "E") {
@@ -60,8 +59,7 @@ for (I in seq_along(listFiles)) {
   CSI <- (sum(abs(diff(ptOrez$f)))) / tab$syll[I]
   tab$CSI[I] <- CSI
   tab$syll_s_PT[I] <- tab$syll[I] / tab$durationPT[I]
-  
-  
+    
   fileTG <- substring(file, 1, nchar(file) - 9)
   fileTextGrid <- paste0(inputFolderTG, "/", fileTG, "TextGrid")
   
@@ -76,17 +74,13 @@ for (I in seq_along(listFiles)) {
   
   tab$durationTG[I] <- max(tg$word$t2[podminka]) - min(tg$word$t1[podminka])
   tab$syll_s_TG[I] <- tab$syll[I] / tab$durationTG[I]
- 
 }
 
 # save results
 library(writexl)
-
 write_xlsx(tab, "table.xlsx")
 
-
 library(dplyr)
-
 tabX <- tab %>% group_by(speaker, age, sex)
 
 tabMean <- tabX %>% summarise(
@@ -100,7 +94,6 @@ tabMean <- tabX %>% summarise(
 )
 
 # save results
-
 write_xlsx(tabMean, "table_mean.xlsx")
 
 # grafy
